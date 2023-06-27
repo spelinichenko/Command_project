@@ -7,5 +7,7 @@
         <class>com.company.bookstore.entity.Staff</class>
         <class>com.company.bookstore.entity.Basket</class>
         <class>com.company.bookstore.entity.Genre</class>
+        <class>com.company.bookstore.entity.Author</class>
+        <class>com.company.bookstore.entity.Book</class>
     </persistence-unit>
 </persistence>

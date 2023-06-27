@@ -14,7 +14,7 @@ public class Genre extends StandardEntity {
 
     @NotNull
     @Column(name="NAME")
-    String name;
+    private String name;
 
     public String getName() {
         return name;
