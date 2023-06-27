@@ -1,0 +1,2 @@
+alter table BOOKSTORE_USER add constraint FK_BOOKSTORE_USER_ON_ROLE foreign key (ROLE_ID) references BOOKSTORE_ROLE(ID);
+create index IDX_BOOKSTORE_USER_ON_ROLE on BOOKSTORE_USER (ROLE_ID);
