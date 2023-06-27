@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 -- begin BOOKSTORE_USER
 alter table BOOKSTORE_USER add constraint FK_BOOKSTORE_USER_ON_ROLE foreign key (ROLE_ID) references BOOKSTORE_ROLE(ID)^
 <<<<<<< HEAD
@@ -26,3 +29,4 @@ create unique index IDX_BOOKSTORE_STAFF_UK_LOGIN on BOOKSTORE_STAFF (LOGIN) wher
 create index IDX_BOOKSTORE_STAFF_ON_ROLE on BOOKSTORE_STAFF (ROLE_ID)^
 -- end BOOKSTORE_STAFF
 >>>>>>> 37218b1b1869121bd5226f71f53763cac5d71fb8
+>>>>>>> 5cece3a83f98907bc2ac9ce547d91087a4cafa2e

@@ -35,7 +35,11 @@ public class User extends StandardEntity {
     private Role role;
 
     @NotNull
+<<<<<<< HEAD
+    @Column(name = "LOGIN")
+=======
     @Column(name = "LOGIN", unique = true)
+>>>>>>> 5cece3a83f98907bc2ac9ce547d91087a4cafa2e
     private String login;
 
     @NotNull

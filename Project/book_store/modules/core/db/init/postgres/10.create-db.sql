@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 -- begin BOOKSTORE_USER
 create table BOOKSTORE_USER (
     ID uuid,
@@ -161,3 +164,4 @@ create table BOOKSTORE_GENRE (
 )^
 -- end BOOKSTORE_GENRE
 >>>>>>> 37218b1b1869121bd5226f71f53763cac5d71fb8
+>>>>>>> 5cece3a83f98907bc2ac9ce547d91087a4cafa2e
