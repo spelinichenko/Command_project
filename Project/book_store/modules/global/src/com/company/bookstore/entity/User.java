@@ -35,7 +35,7 @@ public class User extends StandardEntity {
     private Role role;
 
     @NotNull
-    @Column(name = "LOGIN")
+    @Column(name = "LOGIN", unique = true)
     private String login;
 
     @NotNull
