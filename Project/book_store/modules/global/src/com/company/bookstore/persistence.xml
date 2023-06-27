@@ -6,5 +6,6 @@
         <class>com.company.bookstore.entity.Role</class>
         <class>com.company.bookstore.entity.Staff</class>
         <class>com.company.bookstore.entity.Basket</class>
+        <class>com.company.bookstore.entity.Genre</class>
     </persistence-unit>
 </persistence>
