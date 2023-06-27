@@ -2,5 +2,12 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="book_store" transaction-type="RESOURCE_LOCAL">
 
+        <class>com.company.bookstore.entity.User</class>
+        <class>com.company.bookstore.entity.Role</class>
+        <class>com.company.bookstore.entity.Staff</class>
+        <class>com.company.bookstore.entity.Basket</class>
+        <class>com.company.bookstore.entity.Genre</class>
+        <class>com.company.bookstore.entity.Author</class>
+        <class>com.company.bookstore.entity.Book</class>
     </persistence-unit>
 </persistence>
