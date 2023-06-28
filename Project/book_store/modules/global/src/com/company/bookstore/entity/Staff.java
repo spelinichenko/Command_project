@@ -23,7 +23,7 @@ public class Staff extends StandardEntity {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ROLE_ID")
-    private Role role;
+    private com.haulmont.cuba.security.entity.Role role;
 
     @NotNull
     @Column(name = "LOGIN", unique = true)
@@ -49,11 +49,11 @@ public class Staff extends StandardEntity {
         return lastName;
     }
 
-    public void setRole(Role role) {
+    public void setRole(com.haulmont.cuba.security.entity.Role role) {
         this.role = role;
     }
 
-    public Role getRole() {
+    public com.haulmont.cuba.security.entity.Role getRole() {
         return role;
     }
 

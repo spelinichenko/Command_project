@@ -1,3 +1,0 @@
-alter table BOOKSTORE_STAFF add constraint FK_BOOKSTORE_STAFF_ON_ROLE foreign key (ROLE_ID) references BOOKSTORE_ROLE(ID);
-create unique index IDX_BOOKSTORE_STAFF_UK_LOGIN on BOOKSTORE_STAFF (LOGIN) where DELETE_TS is null ;
-create index IDX_BOOKSTORE_STAFF_ON_ROLE on BOOKSTORE_STAFF (ROLE_ID);
