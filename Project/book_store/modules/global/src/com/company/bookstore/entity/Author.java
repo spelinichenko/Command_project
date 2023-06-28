@@ -1,5 +1,6 @@
 package com.company.bookstore.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.Date;
 
 @Table(name = "BOOKSTORE_AUTHOR")
 @Entity(name = "bookstore_Author")
+@NamePattern("%s %s|lastName, firstName")
 public class Author extends StandardEntity {
     private static final long serialVersionUID = -665983065292266563L;
 
