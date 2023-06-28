@@ -1,2 +1,0 @@
-alter table BOOKSTORE_BASKET add constraint FK_BOOKSTORE_BASKET_ON_BOOK foreign key (BOOK_ID) references BOOKSTORE_BOOK(ID);
-create index IDX_BOOKSTORE_BASKET_ON_BOOK on BOOKSTORE_BASKET (BOOK_ID);

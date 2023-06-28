@@ -1,6 +1,7 @@
 package com.company.bookstore.service;
 
 import com.haulmont.cuba.security.entity.User;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import java.io.Serializable;
 import java.util.UUID;
