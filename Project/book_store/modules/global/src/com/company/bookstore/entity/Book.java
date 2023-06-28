@@ -1,5 +1,6 @@
 package com.company.bookstore.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.time.LocalDate;
 
 @Table(name = "BOOKSTORE_BOOK")
 @Entity(name = "bookstore_Book")
+@NamePattern("%s|name")
 public class Book extends StandardEntity {
     private static final long serialVersionUID = 3501256826653468493L;
 
@@ -15,10 +17,19 @@ public class Book extends StandardEntity {
     @Column(name="NAME")
     private String name;
 
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "GENRE_ID")
     private Genre genre;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "AUTHOR_ID")
+    private Author author;
+
+    @Column(name = "PUBLICATION_YEAR")
+    private LocalDate publicationYear;
+
+    @Column(name = "COUNT")
+    private Integer count;
 
     public void setGenre(Genre genre) {
         this.genre = genre;
@@ -27,12 +38,6 @@ public class Book extends StandardEntity {
     public Genre getGenre() {
         return genre;
     }
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "AUTHOR_ID")
-    private Author author;
-
-    private LocalDate publicationYear;
 
     public String getName() {
         return name;
@@ -57,8 +62,6 @@ public class Book extends StandardEntity {
     public void setCount(Integer count) {
         this.count = count;
     }
-
-    private Integer count;
 
     public void setAuthor(Author author) {
         this.author = author;

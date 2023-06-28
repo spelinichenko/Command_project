@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
--- begin BOOKSTORE_USER
 create table BOOKSTORE_USER (
     ID uuid,
     VERSION integer not null,
@@ -16,10 +12,9 @@ create table BOOKSTORE_USER (
     LAST_NAME varchar(255),
     BALANCE double precision,
     DAY_OF_BIRTH date,
+    ROLE_ID uuid,
     LOGIN varchar(255),
     PASSWORD varchar(255),
     --
     primary key (ID)
-)^
--- end BOOKSTORE_USER
->>>>>>> 5ceb8b4034e6e9348bc105e47b7ed154b42bdfa7
+);
