@@ -8,6 +8,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 86a1134a57df8eba443ca48d1a3ede1b7eb0f80f
 @Entity(name = "bookstore_User")
 @NamePattern("%s %s|lastName,firstName")
 @Extends(com.haulmont.cuba.security.entity.User.class)
