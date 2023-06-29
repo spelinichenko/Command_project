@@ -27,7 +27,8 @@ public class RegistrationScreen extends Screen {
     @Inject
     private TextField<String> middleNameField;
 
-    private java.sql.Date dateField;
+    @Inject
+    private DateField<LocalDate> dateField;
 
     @Inject
     private TextField<String> loginField;
@@ -106,7 +107,7 @@ public class RegistrationScreen extends Screen {
     /**
      * @return date of birth
      */
-    public Date getDateField() {
+    public LocalDate getDateField() {
         return dateField.getValue();
     }
 }
