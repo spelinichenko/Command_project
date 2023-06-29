@@ -11,6 +11,7 @@ import com.haulmont.cuba.gui.screen.UiController;
 import com.haulmont.cuba.gui.screen.UiDescriptor;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -26,8 +27,7 @@ public class RegistrationScreen extends Screen {
     @Inject
     private TextField<String> middleNameField;
 
-    @Inject
-    private DateField<Date> dateField;
+    private java.sql.Date dateField;
 
     @Inject
     private TextField<String> loginField;
@@ -46,7 +46,7 @@ public class RegistrationScreen extends Screen {
         try {
             registrationService.userRegistration(getLogin(), getPassword(),
                                                  getLastNameField(),getFirstNameField(),getMiddleNameField(),
-                                                 getDateField().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+                                                 getDateField());
 
             notifications.create(Notifications.NotificationType.TRAY)
                     .withCaption("Created user " + getLogin())

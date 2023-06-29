@@ -10,3 +10,4 @@ modules/*/build/*
 out
 test-run
 ../.idea/*
+modules/core/db/*

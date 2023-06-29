@@ -25,7 +25,7 @@
                 </row>
                 <row>
                     <label value="msg://registrationScreenDOB.caption" align="MIDDLE_LEFT"/>
-                    <dateField id="dateField"/>
+                    <dateField id="dateField" property="dateField"/>
                 </row>
                 <row>
                     <label value="msg://registrationScreenLogin.caption" align="MIDDLE_LEFT"/>
