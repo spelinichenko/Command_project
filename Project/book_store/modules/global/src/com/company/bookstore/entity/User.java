@@ -18,15 +18,15 @@ public class User extends com.haulmont.cuba.security.entity.User {
     @Column(name = "BALANCE", nullable = false)
     private Double balance;
 
-    @Column(name = "DAY_OF_BIRTH")
-    private LocalDate dayOfBirth;
+    @Column(name = "DATE_OF_BIRTH")
+    private LocalDate dateOfBirth;
 
     public void setDayOfBirth(LocalDate dayOfBirth) {
-        this.dayOfBirth = dayOfBirth;
+        this.dateOfBirth = dayOfBirth;
     }
 
     public LocalDate getDayOfBirth() {
-        return dayOfBirth;
+        return dateOfBirth;
     }
 
     public void setBalance(Double balance) {

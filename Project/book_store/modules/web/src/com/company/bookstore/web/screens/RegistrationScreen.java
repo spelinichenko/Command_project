@@ -4,19 +4,30 @@ import com.company.bookstore.service.RegistrationService;
 import com.haulmont.cuba.core.global.Messages;
 import com.haulmont.cuba.core.global.validation.MethodParametersValidationException;
 import com.haulmont.cuba.gui.Notifications;
-import com.haulmont.cuba.gui.components.Button;
-import com.haulmont.cuba.gui.components.PasswordField;
-import com.haulmont.cuba.gui.components.TextField;
+import com.haulmont.cuba.gui.components.*;
 import com.haulmont.cuba.gui.screen.Screen;
 import com.haulmont.cuba.gui.screen.Subscribe;
 import com.haulmont.cuba.gui.screen.UiController;
 import com.haulmont.cuba.gui.screen.UiDescriptor;
 
 import javax.inject.Inject;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 
 @UiController("bookstore_RegistrationScreen")
 @UiDescriptor("registration-screen.xml")
 public class RegistrationScreen extends Screen {
+
+    @Inject
+    private TextField<String> lastNameField;
+    @Inject
+    private TextField<String> firstNameField;
+    @Inject
+    private TextField<String> middleNameField;
+
+    @Inject
+    private DateField<Date> dateField;
 
     @Inject
     private TextField<String> loginField;
@@ -33,7 +44,9 @@ public class RegistrationScreen extends Screen {
     @Subscribe("okBtn")
     public void onOkBtnClick(Button.ClickEvent event) {
         try {
-            registrationService.userRegistration(getLogin(), getPassword());
+            registrationService.userRegistration(getLogin(), getPassword(),
+                                                 getLastNameField(),getFirstNameField(),getMiddleNameField(),
+                                                 getDateField().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
 
             notifications.create(Notifications.NotificationType.TRAY)
                     .withCaption("Created user " + getLogin())
@@ -67,5 +80,33 @@ public class RegistrationScreen extends Screen {
      */
     public String getPassword() {
         return passwordField.getValue();
+    }
+
+    /**
+     * @return last name
+     */
+    public String getLastNameField() {
+        return lastNameField.getValue();
+    }
+
+    /**
+     * @return first name
+     */
+    public String getFirstNameField() {
+        return firstNameField.getValue();
+    }
+
+    /**
+     * @return middle name
+     */
+    public String getMiddleNameField() {
+        return middleNameField.getValue();
+    }
+
+    /**
+     * @return date of birth
+     */
+    public Date getDateField() {
+        return dateField.getValue();
     }
 }
