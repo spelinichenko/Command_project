@@ -3,10 +3,11 @@
     <persistence-unit name="book_store" transaction-type="RESOURCE_LOCAL">
 
         <class>com.company.bookstore.entity.User</class>
-        <class>com.company.bookstore.entity.Staff</class>
         <class>com.company.bookstore.entity.Basket</class>
         <class>com.company.bookstore.entity.Genre</class>
         <class>com.company.bookstore.entity.Author</class>
         <class>com.company.bookstore.entity.Book</class>
+        <class>com.company.bookstore.entity.BookPlacement</class>
+        <class>com.company.bookstore.entity.Store</class>
     </persistence-unit>
 </persistence>

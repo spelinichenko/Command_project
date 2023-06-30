@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://loginScreen.caption"
         extends="/com/haulmont/cuba/web/app/login/login-screen.xml">
     <layout>
         <vbox id="loginWrapper"
@@ -11,7 +12,7 @@
                       margin="true,false,false,false"
                       spacing="true">
                     <linkButton id="registerBtn"
-                                caption="Register"/>
+                                caption="msg://loginScreenRegister.caption"/>
                 </hbox>
             </vbox>
         </vbox>
