@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://genreEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.bookstore.web.screens.genre">
+    <data>
+        <instance id="genreDc"
+                  class="com.company.bookstore.entity.Genre">
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="genreDc">
+            <column width="350px">
+                <textField id="nameField" property="name"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"
+                    caption="&#1055;&#1088;&#1080;&#1084;&#1077;&#1085;&#1080;&#1090;&#1100;"/>
+            <button id="closeBtn" action="windowClose" caption="&#1047;&#1072;&#1082;&#1088;&#1099;&#1090;&#1100;"/>
+        </hbox>
+    </layout>
+</window>
