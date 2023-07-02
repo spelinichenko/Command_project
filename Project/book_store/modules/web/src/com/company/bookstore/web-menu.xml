@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-bookstore" insertBefore="administration" caption="mainMsg://menu_config.application-bookstore">
-        <item screen="bookstore_RegistrationScreen" caption="mainMsg://menu_config.bookstore_RegistrationScreen"/>
+
     </menu>
 </menu-config>
