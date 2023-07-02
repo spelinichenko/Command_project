@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id=":app-global:main" external.linked.project.path="$MODULE_DIR$/../../../../book_store/modules/global" external.root.project.path="$MODULE_DIR$/../../../../book_store" external.system.id="GRADLE" external.system.module.group="com.company.bookstore" external.system.module.type="sourceSet" external.system.module.version="0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
+<<<<<<< Updated upstream
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+=======
+  <component name="NewModuleRootManager">
+>>>>>>> Stashed changes
     <output url="file://$MODULE_DIR$/../../../../book_store/modules/global/build/classes/java/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../book_store/modules/global/src">

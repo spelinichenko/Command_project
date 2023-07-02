@@ -3,10 +3,17 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../book_store">
+<<<<<<< Updated upstream
       <excludeFolder url="file://$MODULE_DIR$/../../book_store/deploy/tomcat" />
       <excludeFolder url="file://$MODULE_DIR$/../../book_store/deploy" />
       <excludeFolder url="file://$MODULE_DIR$/../../book_store/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../book_store/build" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/../../book_store/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../book_store/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../book_store/deploy/tomcat" />
+      <excludeFolder url="file://$MODULE_DIR$/../../book_store/deploy" />
+>>>>>>> Stashed changes
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
