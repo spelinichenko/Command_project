@@ -5,6 +5,8 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import java.time.LocalDate;
 
 @Table(name = "BOOKSTORE_BOOK")
@@ -28,6 +30,7 @@ public class Book extends StandardEntity {
     @Column(name = "PUBLICATION_YEAR")
     private LocalDate publicationYear;
 
+    @PositiveOrZero
     @Column(name = "COUNT")
     private Integer count;
 

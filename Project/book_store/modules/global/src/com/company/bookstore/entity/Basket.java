@@ -5,6 +5,8 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 
 @Table(name = "BOOKSTORE_BASKET")
 @Entity(name = "bookstore_Basket")
@@ -21,6 +23,7 @@ public class Basket extends StandardEntity {
     private Book book;
 
     @NotNull
+    @PositiveOrZero
     @Column(name = "COUNT")
     private Integer count;
 

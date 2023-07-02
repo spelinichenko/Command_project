@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="book_store.app-core" target="1.8" />
+      <module name="book_store.app-core.main" target="1.8" />
+      <module name="book_store.app-core.test" target="1.8" />
+      <module name="book_store.app-global" target="1.8" />
+      <module name="book_store.app-global.main" target="1.8" />
+      <module name="book_store.app-global.test" target="1.8" />
+      <module name="book_store.app-web" target="1.8" />
+      <module name="book_store.app-web.main" target="1.8" />
+      <module name="book_store.app-web.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

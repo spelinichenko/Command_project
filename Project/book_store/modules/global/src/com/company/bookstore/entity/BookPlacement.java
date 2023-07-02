@@ -22,7 +22,18 @@ public class BookPlacement extends StandardEntity {
     @JoinColumn(name = "STORE_ID")
     private Store store;
 
-    //Book book;
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "BOOK_ID")
+    private Book book;
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Book getBook() {
+        return book;
+    }
 
     public void setCount(Integer count) {
         this.count = count;

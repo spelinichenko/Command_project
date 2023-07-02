@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Project.iml" filepath="$PROJECT_DIR$/.idea/Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/book_store.iml" filepath="$PROJECT_DIR$/.idea/modules/book_store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/book_store.app-core.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/book_store.app-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/book_store.app-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/book_store.app-core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/book_store.app-core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/book_store.app-core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/book_store.app-global.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/book_store.app-global.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/book_store.app-global.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/book_store.app-global.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/book_store.app-global.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/book_store.app-global.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/book_store.app-web.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/book_store.app-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/book_store.app-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/book_store.app-web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/book_store.app-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/book_store.app-web.test.iml" />
+    </modules>
+  </component>
+</project>

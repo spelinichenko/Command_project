@@ -1,1 +1,0 @@
-update SEC_USER set DTYPE = 'bookstore_User' where DTYPE is null ;
