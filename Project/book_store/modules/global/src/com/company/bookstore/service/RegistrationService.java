@@ -14,6 +14,8 @@ public interface RegistrationService {
                                         String lastName, String firstName, String middleName,
                                         LocalDate dateOfBirth);
 
+    void addGuestRoleToAnonymous();
+
     public static class RegistrationResult implements Serializable {
 
         private UUID userId;

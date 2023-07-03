@@ -11,7 +11,7 @@ import com.haulmont.cuba.security.role.ScreenPermissionsContainer;
 public class GuestRole extends AnnotatedRoleDefinition {
     public final static String NAME = "Guest";
 
-    @ScreenAccess(screenIds = {"loginScreen", "bookstore_RegistrationScreen"})
+    @ScreenAccess(screenIds = {"registration-screen.xml", "bookstore_RegistrationScreen"})
     @Override
     public ScreenPermissionsContainer screenPermissions() {
         return super.screenPermissions();
