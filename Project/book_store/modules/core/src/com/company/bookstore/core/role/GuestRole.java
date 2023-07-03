@@ -14,6 +14,6 @@ public class GuestRole extends AnnotatedRoleDefinition {
     @ScreenAccess(screenIds = {"loginScreen", "bookstore_RegistrationScreen"})
     @Override
     public ScreenPermissionsContainer screenPermissions() {
-        return super.screenPermissions();
+       return super.screenPermissions();
     }
 }
