@@ -9,5 +9,4 @@ import com.company.bookstore.entity.Genre;
 @EditedEntityContainer("genreDc")
 @LoadDataBeforeShow
 @Route(value = "genres/edit", parentPrefix = "pets")
-public class GenreEdit extends StandardEditor<Genre> {
-}
+public class GenreEdit extends StandardEditor<Genre> {}

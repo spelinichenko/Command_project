@@ -4,7 +4,6 @@ import com.company.bookstore.core.role.CustomerRole;
 import com.company.bookstore.entity.User;
 import com.haulmont.cuba.core.global.*;
 import com.haulmont.cuba.security.entity.Group;
-import com.haulmont.cuba.security.entity.Role;
 import com.haulmont.cuba.security.entity.UserRole;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Service;
@@ -17,13 +16,16 @@ import java.util.UUID;
 public class RegistrationServiceBean implements RegistrationService {
 
     private static final String COMPANY_GROUP_ID = "0fa2b1a5-1d68-4d69-9fbd-dff348347f93";
-    private static final Logger log = org.slf4j.LoggerFactory.getLogger(RegistrationServiceBean.class);
+    private static final String ANONYMOUS_UUID = "a405db59-e674-4f63-8afe-269dda788fe8";
 
     @Inject
     private DataManager dataManager;
 
     @Inject
     private Metadata metadata;
+
+    @Inject
+    private Logger log;
 
     @Inject
     private PasswordEncryption passwordEncryption;
@@ -35,7 +37,7 @@ public class RegistrationServiceBean implements RegistrationService {
 
         Group group = dataManager.load(LoadContext.create(Group.class).setId(UUID.fromString(COMPANY_GROUP_ID)));
         log.info("Начало регистрации");
-        com.company.bookstore.entity.User user = metadata.create(User.class);
+        User user = metadata.create(User.class);
         user.setLogin(login);
         user.setPassword(passwordEncryption.getPasswordHash(user.getId(), password));
         user.setBalance(0.0);
@@ -50,5 +52,30 @@ public class RegistrationServiceBean implements RegistrationService {
 
         log.info("Конец регистрации");
         return new RegistrationResult(user);
+    }
+
+    @Override
+    public void addGuestRoleToAnonymous() {
+        log.info("Начало инициализации");
+        com.haulmont.cuba.security.entity.User anonymous = dataManager.load(LoadContext.create(com.haulmont.cuba.security.entity.User.class).setId(UUID.fromString(ANONYMOUS_UUID)));
+        log.info("Получение пользователя");
+        assert anonymous != null;
+        log.info("Пользователь получен: " + anonymous.getName());
+        UserRole userRole = metadata.create(UserRole.class);
+        log.info("Создание UserRole");
+        log.info("Получение ролей пользователя");
+        Long count = dataManager.loadValue("select count(s) from sec$UserRole s where " +
+                "s.user = :userId and s.roleName = :roleName", Long.class)
+                .parameter("userId", anonymous)
+                .parameter("roleName", "Guest")
+                .one();
+        if (count == 1) {
+            log.info("Роль существует");
+            return;
+        }
+        log.info("Роль не существует");
+        userRole.setUser(anonymous);
+        userRole.setRoleName("Guest");
+        dataManager.commit(new CommitContext(userRole));
     }
 }
