@@ -16,7 +16,7 @@ public class Book extends StandardEntity {
     private static final long serialVersionUID = 3501256826653468493L;
 
     @NotNull
-    @Column(name="NAME")
+    @Column(name = "NAME")
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)

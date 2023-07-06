@@ -4,6 +4,9 @@
         focusComponent="form"
         messagesPack="com.company.bookstore.web.screens.book">
     <data>
+        <instance id="bookDC" class="com.company.bookstore.entity.Book" view="_local">
+            <loader/>
+        </instance>
         <instance id="bookDc"
                   class="com.company.bookstore.entity.Book">
             <view extends="_local">
@@ -36,7 +39,12 @@
                     </actions>
                 </pickerField>
                 <dateField id="publicationYearField" property="publicationYear"/>
-                <textField id="countField" property="count"/>
+                <slider dataContainer="bookDC" property="count" id="slider"
+                datatype="int"
+                min="1"
+                max="100"/>
+                <textField id="countField" property="count"
+                visible="false"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

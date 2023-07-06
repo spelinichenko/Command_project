@@ -7,6 +7,7 @@ import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.cuba.security.entity.User;
 import com.haulmont.cuba.security.entity.UserRole;
 import com.haulmont.cuba.web.app.login.LoginScreen;
+import com.haulmont.cuba.web.gui.screen.ScreenDependencyUtils;
 import org.slf4j.Logger;
 
 import javax.inject.Inject;
@@ -36,7 +37,6 @@ public class ExtLoginScreen extends LoginScreen {
         log.info("Событие после инициализации");
         registrationService.addGuestRoleToAnonymous();
     }*/
-
     @Subscribe
     public void onInit1(InitEvent event) {
         log.info("Событие после инициализации");

@@ -1,0 +1,33 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dialogMode width="700" height="700"/>
+    <data>
+        <collection id="countryLitresDc"
+                    class="com.company.bookstore.entity.Book">
+            <view extends="_local">
+                <property name="genre" view="_minimal"/>
+            </view>
+            <loader id="countryLitresLoader">
+                <query>
+                    <![CDATA[select e from bookstore_Book e order by e.count desc]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <chart:pieChart id="pieChart"
+                        dataContainer="countryLitresDc"
+                        height="115%"
+                        titleField="genre"
+                        valueField="count"
+                        width="115%"
+        addClassNames="false">
+            <chart:legend autoMargins="false"
+                          marginRight="80"
+                          markerType="CIRCLE"
+                          position="RIGHT"/>
+            <chart:balloon fixedPosition="true"/>
+            <chart:export/>
+        </chart:pieChart>
+    </layout>
+</window>
